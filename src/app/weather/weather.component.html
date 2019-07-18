@@ -1,0 +1,40 @@
+<h1 class="text-center my-4" >Weather Forecast App</h1> 
+<span *ngIf = "err" class="error-messages">{{errorData}}</span>
+    <div class="col-md-6" class="main">
+      <h3 class="text-center my-4">Search for Weather:</h3>
+      <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+        <div class="form-group">
+          <input
+          required
+          minlength="3"
+          (ngModelChange)="clearData()"
+            class="form-control"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocation"
+            placeholder="Please input a Location"
+           formControlName="location" />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success btn-md"  [disabled]=!weatherSearchForm.valid >
+              {{ (submitLoading ? ' Loading...' : 'Search')}} 
+          </button>
+        </div>
+      </form>
+    </div >
+    <div class="table table-condensed" class="position"> 
+      <table  class="table">
+   <tr  *ngFor="let ar of arr" >
+   <td>  {{ar?.date | date: 'dd/MM/yyyy'}}</td>   
+   <br>
+   <td>humidity: {{ar?.humidity}}</td><br>       
+   <td>Weather: {{ar?.description}}</td>
+   <span *ngIf ="cloud" class="glyphicon glyphicon-cloud"></span>
+  </tr>
+<br>
+      </table>
+
+    </div>  
+
+  
+

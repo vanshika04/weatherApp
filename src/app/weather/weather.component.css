@@ -1,0 +1,19 @@
+td {
+    border: 1px solid black;
+  }
+.position{
+  position: fixed;
+  left: 518px;
+  top: 276px; 
+}
+
+.main{
+    position: fixed;
+    left: 587px;
+}
+.error-messages {
+    position: fixed;
+    top:207px;
+    left: 587px;
+    color: red;
+    font-size: 25px; }

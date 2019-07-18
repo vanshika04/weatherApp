@@ -1,0 +1,38 @@
+
+<h1 class="text-center my-4" >Weather Forecast App</h1>
+ 
+
+<div class="main">
+  <div class="row">
+    <div class="col-md-6">
+        <p>That was easy! <i class="far fa-thumbs-up"></i></p>
+      <span class="glyphicon glyphicon-cloud"></span> 
+      <h3 class="text-center my-4">Search for Weather:</h3>
+      <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocation"
+            placeholder="Please input a Location"
+           formControlName="location" />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success btn-md" >
+            Search for the weather
+          </button>
+        </div>
+      </form>
+    </div >
+    <div>
+    <div  *ngFor="let ar of arr">
+      <h1 > {{ar.date | date: 'dd/MM/yyyy'}}</h1>
+      <p >humidity: {{ar.humidity}}</p>
+        <p >Weather: {{ar.description}}</p>
+    <br>
+      </div>
+    </div>  
+
+  </div>
+</div>
