@@ -1,3 +1,39 @@
+/*
+---
+title: "what?"
+description: "SRP"
+preview_image: /images/blog/
+section: blog
+author: john doe
+date: 2018-01-08 10:00 utc
+tags: development
+published: true
+---
+
+THE SINGLE
+
+READMORE
+
+![SRP](/images/blog/2018)
+
+##History
+
+term wasss
+
+
+OUTPUT:
+
+"{date":"2018-01-08 10",
+"author":"john doe",
+"description":"SRP",
+"published":"true",
+"short-content":"THE SINGLE",
+"title":"what?",
+"content":"![SRP](/images/blog/2018)",
+"tags":"development}",
+*/
+
+
 package practice;
 
 import java.io.BufferedReader;
